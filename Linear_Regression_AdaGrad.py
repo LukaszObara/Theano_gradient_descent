@@ -149,33 +149,11 @@ def train_model(training_data, validation_data=None, learning_rate=0.01,
 
 ########################################################################
 
-location_train = 'C:\\Users\\lukas\\OneDrive\\Documents\\Machine Learning' +\
-				 '\\Theano\\Linear_Regeression\Data\\data_train.npy'
-location_valid = 'C:\\Users\\lukas\\OneDrive\\Documents\\Machine Learning' +\
-				 '\\Theano\\Linear_Regeression\Data\\data_val.npy'
+if __name__ == '__main__':
+	location_train = 'C:\\...\\Theano\\Linear_Regeression\Data\\data_train.npy'
+	location_valid = 'C:\\...\\Theano\\Linear_Regeression\Data\\data_val.npy'
 
-training_data = np.load(location_train)
-validation_data = np.load(location_valid)
-y = train_model(training_data, validation_data)
-
-# m = 20
-# x = np.arange(len(y[m:]))
-
-# plt.figure(figsize=(40,20))
-# plt.plot(x, y[m:])
-# plt.show()
-
-# Ensemble technique
-# weights_ens, bias_ens = 0, 0
-# n = 10
-# for i in range(n):
-# 	weights, bias = train_model(training_data, validation_data)
-
-# 	weights_ens += weights.get_value()
-# 	bias_ens += bias.get_value()
-
-# print('Ensemble weights: {}, ensemble bias: {}'
-# 	  .format(weights_ens/n, bias_ens/n))
-
-########################################################################
+	training_data = np.load(location_train)
+	validation_data = np.load(location_valid)
+	y = train_model(training_data, validation_data)
 
