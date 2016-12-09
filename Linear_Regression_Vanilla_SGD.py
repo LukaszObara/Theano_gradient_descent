@@ -124,41 +124,13 @@ def train_model(training_data, validation_data=None, learning_rate= 0.0001,
 
 ###############################################################################
 
-location_train = 'C:\\Users\\lukas\\OneDrive\\Documents\\Machine Learning' +\
-				 '\\Theano\\Linear_Regeression\Data\\data_train.npy'
-location_valid = 'C:\\Users\\lukas\\OneDrive\\Documents\\Machine Learning' +\
-				 '\\Theano\\Linear_Regeression\Data\\data_val.npy'
+location_train = 'C:\\...\\Theano\\Linear_Regeression\Data\\data_train.npy'
+location_valid = 'C:\\...\\Theano\\Linear_Regeression\Data\\data_val.npy'
 
 training_data = np.load(location_train)
 validation_data = np.load(location_valid)
 t_loss, v_loss, _ = train_model(training_data, validation_data, 
 								display_results=True)
-
-m = 5
-x = np.arange(len(t_loss[m:]))
-
-fig = plt.figure(figsize=(40, 20))
-ax = fig.add_subplot(1, 1, 1) 
-                                   
-major_ticks_x = np.arange(0, 40, 10)                                              
-minor_ticks_x = np.arange(0, 40, 5)
-major_ticks_y = np.arange(0, 450, 50)                                              
-minor_ticks_y = np.arange(0, 450, 10)
-
-ax.set_xticks(major_ticks_x)                                                       
-ax.set_xticks(minor_ticks_x, minor=True)                                           
-ax.set_yticks(major_ticks_y)                                                       
-ax.set_yticks(minor_ticks_y, minor=True) 
-
-ax.grid(which='both')
-ax.grid(which='minor', alpha=0.7)                                                
-ax.grid(which='major', alpha=1.0)    
-
-t_plot = plt.plot(x, t_loss[m:], label='Training Loss')
-v_plot = plt.plot(x, v_loss[m:], label='Validation Loss')                                            
-
-plt.legend(loc='upper right')
-# plt.show()
 
 # Using an Ensemble
 # weights_ens, bias_ens, epochs = 0, 0, 0
