@@ -157,10 +157,8 @@ def train_model(training_data, validation_data=None, learning_rate=1e-0,
 	return validation_losses
 ########################################################################
 
-location_train = 'C:\\Users\\lukas\\OneDrive\\Documents\\Machine Learning' +\
-				 '\\Theano\\Linear_Regeression\Data\\data_train.npy'
-location_valid = 'C:\\Users\\lukas\\OneDrive\\Documents\\Machine Learning' +\
-				 '\\Theano\\Linear_Regeression\Data\\data_val.npy'
+location_train = 'C:\\...\\Theano\\Linear_Regeression\Data\\data_train.npy'
+location_valid = 'C:\\...\\Theano\\Linear_Regeression\Data\\data_val.npy'
 
 training_data = np.load(location_train)
 validation_data = np.load(location_valid)
