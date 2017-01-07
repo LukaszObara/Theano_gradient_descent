@@ -1,5 +1,5 @@
 # Gradient Descent Algorithms Using Theano
-Various gradient descent algorithms tested using `Theano`. For simplicity each algorithm has its own `.py` file. A jupyter notebook is written further explaining how each convergence is applied. 
+Various gradient descent algorithms tested using `Theano`. For simplicity each algorithm has its own `.py` file. A jupyter notebook is  included explaining how each gradient descent method operates and how to generate the code for each instance. 
 
 # References
 <ol>
